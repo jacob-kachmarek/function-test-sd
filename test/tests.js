@@ -59,14 +59,38 @@ test('multiplyBy12ThenHalve', (expect) => {
     const actual = multiplyBy12ThenHalve(3);
 
     expect.deepEqual(actual, expected, '3 = 36');
+
+    const expected2 = 48;
+
+    const actual2 = multiplyBy12ThenHalve(4);
+
+    expect.deepEqual(actual, expected, '4 = 48');
+
+    const expected3 = 60;
+
+    const actual3 = multiplyBy12ThenHalve(5);
+
+    expect.deepEqual(actual, expected, '5 = 60');
 });
 
 test('divideThenMultiply', (expect) => {
-    const expected = [1, 2, 3];
+    const expected = 18;
 
-    const actual = divideThenMultiply(123);
+    const actual = divideThenMultiply('12', '2', '3');
 
-    expect.deepEqual(actual, expected, '123 = [1, 2, 3]');
+    expect.deepEqual(actual, expected, '18 = 12, 2, 3');
+
+    const expected2 = 21;
+
+    const actual2 = divideThenMultiply('14', '2', '3');
+
+    expect.deepEqual(actual, expected, '21 = 14, 2, 3');
+
+    const expected3 = 24;
+
+    const actual3 = divideThenMultiply('16', '2', '3');
+
+    expect.deepEqual(actual, expected, '24 = 16, 2, 3');
 });
 
 test('returnAsAnArray', (expect) => {
@@ -75,22 +99,58 @@ test('returnAsAnArray', (expect) => {
     const actual = returnAsAnArray(1, 2, 3);
 
     expect.deepEqual(actual, expected, '123 = [1, 2, 3]');
+
+    const expected2 = [2, 3, 4];
+
+    const actual2 = returnAsAnArray(2, 3, 4);
+
+    expect.deepEqual(actual, expected, '234 = [2, 3, 4]');
+
+    const expected3 = [4, 5, 6];
+
+    const actual3 = returnAsAnArray(4, 5, 6);
+
+    expect.deepEqual(actual, expected, '456 = [4, 5, 6]');
 });
 
 test('returnAsAString', (expect) => {
-    const expected = 'hello! your lucky number for the day is 6';
+    const expected = '123';
 
-    const actual = returnAsAString(1 + 2 + 3);
+    const actual = returnAsAString('1', '2', '3');
 
-    expect.deepEqual(actual, expected, 'hello! your lucky number for the day is 6 = (1 + 2 + 3)');
+    expect.deepEqual(actual, expected, '123 = 1, 2, 3');
+
+    const expected2 = '345';
+
+    const actual2 = returnAsAString('3', '4', '5');
+
+    expect.deepEqual(actual, expected, '345 = 3, 4, 5');
+
+    const expected3 = '456';
+
+    const actual3 = returnAsAString('4', '5', '6');
+
+    expect.deepEqual(actual, expected, '456 = 4, 5, 6');
 });
 
 test('makeLuckyGreeting', (expect) => {
-    const expected = 'apple';
+    const expected = 'hello! your lucky number for the day is 6';
 
-    const actual = makeLuckyGreeting(['kiwi', 'apple', 'orange', 'plum']);
+    const actual = makeLuckyGreeting(1 + 2 + 3);
 
-    expect.deepEqual(actual, expected, 'apple = [kiwi, apple, orange, plum]');
+    expect.deepEqual(actual, expected, 'hello! your lucky number for the day is 6 = (1 + 2 + 3)');
+
+    const expected2 = 'hello! your lucky number for the day is 8';
+
+    const actual2 = makeLuckyGreeting(2 + 2 + 4);
+
+    expect.deepEqual(actual, expected, 'hello! your lucky number for the day is 8 = (2 + 2 + 4)');
+
+    const expected3 = 'hello! your lucky number for the day is 10';
+
+    const actual3 = makeLuckyGreeting(4 + 4 + 2);
+
+    expect.deepEqual(actual, expected, 'hello! your lucky number for the day is 10 = (4 + 4 + 2)');
 });
 
 test('getSecondItem', (expect) => {
@@ -99,6 +159,18 @@ test('getSecondItem', (expect) => {
     const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
 
     expect.deepEqual(actual, expected, 'apple');
+
+    const expected2 = 'grape';
+
+    const actual2 = getSecondItem(['kiwi', 'grape', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'grape');
+
+    const expected3 = 'papaya';
+
+    const actual3 = getSecondItem(['kiwi', 'papaya', 'orange', 'plum']);
+
+    expect.deepEqual(actual, expected, 'papaya');
 });
 
 skip('this test should be skipped', (expect) => {

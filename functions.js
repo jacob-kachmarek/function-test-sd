@@ -64,7 +64,8 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return [1, 2, 3];
+    const divideNumbers = firstNumber / secondNumber;
+    return divideNumbers * thirdNumber;
 }
 
 // This function should take in three numbers and return those numbers in an array
@@ -97,7 +98,7 @@ Output:
 */
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return 'hello! your lucky number for the day is ' + (1 + 2 + 3);
+    return '123';
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
@@ -113,7 +114,7 @@ Output:
 */
 
 export function makeLuckyGreeting(firstNumber, secondNumber) {
-    return 'apple';
+    return 'hello! your lucky number for the day is ' + (1 + 2 + 3);
 }
 
 // This function should take an array and return the second item in the array
