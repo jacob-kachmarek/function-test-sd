@@ -48,7 +48,7 @@ Output:
 */
 
 export function multiplyBy12ThenHalve(num) {
-    return (num * 12) / 2;
+    return num * (12 / 2);
 }
 
 // This function should take in three numbers, divide the first by the second, then multiply the result by the third
@@ -98,7 +98,7 @@ Output:
 */
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return '123';
+    return `${firstNumber}${secondNumber}${thirdNumber}`;
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
@@ -114,7 +114,8 @@ Output:
 */
 
 export function makeLuckyGreeting(firstNumber, secondNumber) {
-    return 'hello! your lucky number for the day is ' + (1 + 2 + 3);
+    const addedNum = 'hello! your lucky number for the day is '`${firstNumber}` + `${secondNumber}`;
+    return addedNum;
 }
 
 // This function should take an array and return the second item in the array
