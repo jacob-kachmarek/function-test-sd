@@ -14,8 +14,8 @@ Output:
 
 */
 
-export function addExclamationPoints() {
-    return true;
+export function addExclamationPoints(someString) {
+    return someString + '!!!';
 }
 
 // This function should take in a number and multiply it by seven
@@ -144,7 +144,6 @@ Output:
 'plum'
 
 */
-
 
 // ======================================= STRETCH GOALS ============================================
 
