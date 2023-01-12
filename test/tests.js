@@ -5,7 +5,6 @@ import {
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
-    myFunction,
     returnAsAnArray,
     returnAsAString,
     getSecondItem,
@@ -138,23 +137,19 @@ test('makeLuckyGreeting', (expect) => {
 
     const actual = makeLuckyGreeting(3, 3);
 
-    expect.deepEqual(actual, expected, 'hello! your lucky number for the day is 6 = (1 + 2 + 3)');
+    expect.deepEqual(actual, expected, 'hello! your lucky number for the day is 6 = (3 + 3)');
 
     const expected2 = 'hello! your lucky number for the day is 8';
 
-    const actual2 = makeLuckyGreeting(2 + 4);
+    const actual2 = makeLuckyGreeting(4, 4);
 
-    expect.deepEqual(actual2, expected2, 'hello! your lucky number for the day is 8 = (2 + 2 + 4)');
+    expect.deepEqual(actual2, expected2, 'hello! your lucky number for the day is 6 = (4 + 4)');
 
     const expected3 = 'hello! your lucky number for the day is 10';
 
-    const actual3 = makeLuckyGreeting(4 + 4 + 2);
+    const actual3 = makeLuckyGreeting(5, 5);
 
-    expect.deepEqual(
-        actual3,
-        expected3,
-        'hello! your lucky number for the day is 10 = (4 + 4 + 2)'
-    );
+    expect.deepEqual(actual3, expected3, 'hello! your lucky number for the day is 10 = (5 + 5)');
 });
 
 test('getSecondItem', (expect) => {
